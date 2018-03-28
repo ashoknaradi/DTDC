@@ -1,3 +1,4 @@
 controllers\HelloController.class
+Daos\UserComprator.class
 Daos\ConnectionDao.class
 Pojos\User.class

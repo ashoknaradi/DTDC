@@ -10,6 +10,6 @@
 	</servlet-mapping>
 
 	<welcome-file-list>
-		<welcome-file>/Jsps/Home.jsp</welcome-file>
+		<welcome-file>/Jsps/Login.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

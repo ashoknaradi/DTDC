@@ -6,9 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>User Details Page</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/Sort.css">
 <style>
 table, th, td {
-    border: 1px solid fuchsia;
+    border: 1px solid blue;
 }
 </style>
 <script type="text/javascript">
@@ -23,14 +24,24 @@ function editUser(mail) {
 	document.forms[0].method="post";
 	document.forms[0].submit();
 }
+function sortUser() {
+	document.forms[0].action="${pageContext.request.contextPath}/sortUser";
+	document.forms[0].submit();
+}
 </script>
 </head>
 <body>
 	<h3>Welcome to User Details Page!....</h3>
-	<form action="${pageContext.request.contextPath}/deleteUser" method="post">
+	<form action="" method="post">
+		<a href="${pageContext.request.contextPath}/Jsps/Home.jsp">Home Page</a></br>
 		<table>
 			<tr>
-				<th>User Name</th>
+				<th>User Name
+        			<button type="button" class="sortButton" onclick="sortUser()">
+						<img src="${pageContext.request.contextPath}/Images/sort_icon.jpg" style="width:3px;height:10px;">
+					</button>
+				</th>
+				<!-- <th><input type="button" value="User Name" onclick="sortUser()"/></th> -->
 				<th>User Mobile</th>
 				<th>User Email</th>					
 				<th>User City</th>

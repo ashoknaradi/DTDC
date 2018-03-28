@@ -7,8 +7,8 @@
 <title>Spring-MVC Login Page</title>
 </head>
 <body>
-	<h3>Welcome to Login page</h3>
-	<h4>Login User Name is ::: ${error} </h4>
+	<h3><font color="green"> Welcome to Login page </font></h3>
+	<h4><font color="red"> ${error} </font></h4>
 	<form action="${pageContext.request.contextPath}/loginController" method="get">
 		<table>
 			<tr>

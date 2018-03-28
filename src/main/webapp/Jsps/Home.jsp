@@ -7,15 +7,9 @@
 <title>Home Page</title>
 </head>
 <body>
-	<h3>Welcome to Home Page!....</h3>
+	<h3><font color="blue"> Welcome to Home Page!.... </font></h3>
 	<form action="${pageContext.request.contextPath}/homeController" method="post">
 		<table>
-			<!-- <tr>
-				<td><input type="submit" value="Place Order" /></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Trace Order" /></td>
-			</tr> -->
 			<tr>
 				<td><input type="submit" value="Fetch User Details" /></td>
 			</tr>

@@ -71,6 +71,7 @@ public class HelloController {
 		model.addAttribute("error", "Invalid User Details");
 		return "Login";
 	}
+	
 	List<User> list = null;
 	@RequestMapping(value = "homeController", method = RequestMethod.POST)
 	public String userDetails(Model model) {
@@ -82,6 +83,7 @@ public class HelloController {
 		model.addAttribute("UserDetails", dao.fetchUsersList());
 		return "UserDetails";
 	}
+	
 	@RequestMapping(value = "deleteUser", method = RequestMethod.POST)
 	public String deleteUser(@RequestParam("userEmail") String mail, Model model) {
 		System.out.println("Entered into Delete Controller");
@@ -98,6 +100,7 @@ public class HelloController {
 		model.addAttribute("UserDetails", dao.fetchUsersList());
 		return "UserDetails";
 	}
+	
 	@RequestMapping(value = "editUser", method = RequestMethod.POST)
 	public String editUser(@RequestParam("userEmail") String mail,User user, Model model) {
 		System.out.println("Entered into Edit Controller");
@@ -109,6 +112,7 @@ public class HelloController {
 		model.addAttribute("UserDetails", list.get(0));
 		return "UpdateUser";	
 	}
+	
 	@RequestMapping(value = "updateUser", method = RequestMethod.POST)
 	public String updateUser(User user, Model model) {
 		System.out.println("Entered into Update Controller");
@@ -123,4 +127,12 @@ public class HelloController {
 		session.close();
 		return "UserDetails";	
 	}
+	
+	@RequestMapping(value = "sortUser")
+	public String sortUser(Model model) {
+		System.out.println("After Sorting Retrieving the details from DB");
+		model.addAttribute("SortUserDetails", dao.sortUsersList());
+		return "SortUser";	
+	}
+	
 }
